@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* fonts */
+@font-face {
+  font-family: 'Mallory';
+  src: url("../font/mallory/mallory-light.woff2") format("woff2"), url("../font/mallory/mallory-light.woff") format("woff"), url("../font/mallory/mallory-light.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Mallory';
+  src: url("../font/mallory/mallory-bold.woff2") format("woff2"), url("../font/mallory/mallory-bold.woff") format("woff"), url("../font/mallory/mallory-bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: 'Mallory';
+  src: url("../font/mallory/mallory-light-italic.woff2") format("woff2"), url("../font/mallory/mallory-light-italic.woff") format("woff"), url("../font/mallory/mallory-light-italic.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: 'Mallory';
+  src: url("../font/mallory/mallory-bold-italic.woff2") format("woff2"), url("../font/mallory/mallory-bold-italic.woff") format("woff"), url("../font/mallory/mallory-bold-italic.otf") format("opentype");
+  font-weight: bold;
+  font-style: italic; }
+@font-face {
+  font-family: 'Calluna';
+  src: url("../font/calluna/calluna-regular.woff2") format("woff2"), url("../font/calluna/calluna-regular.woff") format("woff"), url("../font/calluna/calluna-regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Calluna';
+  src: url("../font/calluna/calluna-black.woff2") format("woff2"), url("../font/calluna/calluna-black.woff") format("woff"), url("../font/calluna/calluna-black.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: 'Calluna';
+  src: url("../font/calluna/calluna-italic.woff2") format("woff2"), url("../font/calluna/calluna-italic.woff") format("woff"), url("../font/calluna/calluna-italic.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: 'Calluna';
+  src: url("../font/calluna/calluna-bold-italic.woff2") format("woff2"), url("../font/calluna/calluna-bold-italic.woff") format("woff"), url("../font/calluna/calluna-bold-italic.otf") format("opentype");
+  font-weight: bold;
+  font-style: italic; }
