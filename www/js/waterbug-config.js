@@ -6,17 +6,21 @@ var elementPadding = 40; // padding around the logo and credit text
 // the name of the logo object should match the value of the corresponding radio button in the HTML.
 var logos = {
     'lunchbox': {
-        whitePath: '../img/mojo-logo-white.svg', // path to white logo
-        blackPath: '../img/mojo-logo-black.svg', // path to black logo
-        w: 100, // width of logo
-        h: 21, // height of logo
+        //whitePath: '../img/mojo-logo-white.svg', // path to white logo
+        //blackPath: '../img/mojo-logo-black.svg', // path to black logo
+				whitePath: '../img/mojo-logo-white.png', // path to white logo
+        blackPath: '../img/mojo-logo-black.png', // path to black logo
+        w: 180, // width of logo
+        h: 37, // height of logo
         display: 'Lunchbox'
     },
     'socializr': {
-        whitePath: '../img/mojo-logo-white.svg',
-        blackPath: '../img/mojo-logo-black.svg',
-        w: 150,
-        h: 31,
+        //whitePath: '../img/mojo-logo-white.svg',
+        //blackPath: '../img/mojo-logo-black.svg',
+				whitePath: '../img/mojo-logo-white.png',
+        blackPath: '../img/mojo-logo-black.png',
+        w: 180,
+        h: 37,
         display: 'Socializr'
     }
 };
@@ -28,7 +32,7 @@ var blackLogoAlpha = '0.6';
 // type
 var fontWeight = 'normal'; // font weight for credit
 var fontSize = '20pt'; // font size for credit
-var fontFace = "Helvetica"; // font family for credit
+var fontFace = "Arial"; // font family for credit
 var fontShadow = 'rgba(0,0,0,0.7)'; // font shadow for credit
 var fontShadowOffsetX = 0; // font shadow offset x
 var fontShadowOffsetY = 0; // font shadow offset y

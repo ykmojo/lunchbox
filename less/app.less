@@ -6,6 +6,7 @@
 body {
     font-family: @font-family !important;
     font-size: @base-font-size !important;
+		background-color: #ffedaa;
 }
 
 canvas {
@@ -14,31 +15,34 @@ canvas {
 }
 
 header {
-    background: @gray-darker;
+    //background: @gray-darker;
+		background: #FF8733;
     margin: 0;
     padding: 25px @grid-gutter-width / 2;
     color: @gray-lighter;
 
     .home & {
         @media screen and (min-width: 700px){
-            padding-top: 44px;
-            padding-bottom: 44px;
+            padding-top: 24px;
+            padding-bottom: 24px;
         }
         .logo-wrapper {
             width: 100%;
             text-align: center;
             img {
-                height: 150px;
+                height: 50px;
                 width: auto;
             }
         }
     }
 
     a {
-        color: @gray-lighter;
+        //color: @gray-lighter;
+				color: #ffe;
 
         &:hover {
-            color: @gray;
+            //color: @gray;
+						color: #ddc;
             text-decoration: none;
         }
     }
@@ -131,6 +135,7 @@ header {
             font-weight: 600;
             text-transform: uppercase;
             -webkit-font-smoothing: antialiased;
+						color: #FF8733;
         }
 
         p {
@@ -276,7 +281,7 @@ header {
         -webkit-box-shadow: none;
         box-shadow: none;
     }
-    
+
     input[type="range"] {
     	width: 100%;
     }
