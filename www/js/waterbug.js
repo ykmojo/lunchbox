@@ -133,18 +133,18 @@ var buildForm = function() {
 */
 var renderCanvas = function() {
     // canvas is always the same width
-    canvas.width = canvasWidth;
+    canvas.width = Math.floor(canvasWidth);
 
     // if we're cropping, use the aspect ratio for the height
     if (currentCrop !== 'original') {
-        canvas.height = canvasWidth / (16/9);
+        canvas.height = Math.floor(canvasWidth / (16/9));
     }
 
     // clear the canvas
     ctx.clearRect(0,0,canvas.width,canvas.height);
 
     // determine height of canvas and scaled image, then draw the image
-    var imageAspect = img.width / img.height;
+    var imageAspect = Math.floor(img.width) / Math.floor(img.height);
 
     if (currentCrop === 'original') {
         canvas.height = canvasWidth / imageAspect;
@@ -160,8 +160,8 @@ var renderCanvas = function() {
         if (img.width / img.height > canvas.width / canvas.height) {
             shallowImage = true;
 
-            scaledImageHeight = canvasWidth / imageAspect;
-            scaledImageWidth = canvas.height * (img.width / img.height)
+            scaledImageHeight = Math.floor(canvasWidth / imageAspect);
+            scaledImageWidth = Math.floor(canvas.height * (img.width / img.height))
             ctx.drawImage(
                 img,
                 0,
@@ -176,7 +176,7 @@ var renderCanvas = function() {
         } else {
             shallowImage = false;
 
-            scaledImageHeight = canvasWidth / imageAspect;
+            scaledImageHeight = Math.floor(canvasWidth / imageAspect);
             ctx.drawImage(
                 img,
                 0,
@@ -437,12 +437,16 @@ var onSaveClick = function(e) {
         imageFilename = $customFilename.text();
     }
 
-    link.download =  'waterbug-' + imageFilename + '.png';
+    link.download =  'waterbug-' + imageFilename + '.jpg';
 
     /// convert canvas content to data-uri for link. When download
     /// attribute is set the content pointed to by link will be
     /// pushed as "download" in HTML5 capable browsers
-    link.href = canvas.toDataURL();
+		canvas.imageSmoothingEnabled = true;
+		canvas.mozImageSmoothingEnabled = true;
+		canvas.webkitImageSmoothingEnabled = true;
+		canvas.msImageSmoothingEnabled = true;
+    link.href = canvas.toDataURL('image/jpeg',1);
     link.target = "_blank";
 
     /// create a "fake" click-event to trigger the download

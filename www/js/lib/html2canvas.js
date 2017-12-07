@@ -2756,7 +2756,7 @@ _html2canvas.Util.Support = function (options, doc) {
     ].join("");
     try {
       ctx.drawImage(img, 0, 0);
-      canvas.toDataURL();
+      canvas.toDataURL('image/jpeg', 1);
     } catch(e) {
       return false;
     }
@@ -2992,7 +2992,6 @@ _html2canvas.Renderer.Canvas = function(options) {
         newCanvas.width = Math.ceil(bounds.width);
         newCanvas.height = Math.ceil(bounds.height);
         ctx = newCanvas.getContext("2d");
-
         ctx.drawImage(canvas, bounds.left, bounds.top, bounds.width, bounds.height, 0, 0, bounds.width, bounds.height);
         canvas = null;
         return newCanvas;

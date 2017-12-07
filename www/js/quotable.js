@@ -12,32 +12,34 @@ var $logoWrapper = null;
 
 var quotes = [
     {
-        "quote": "I'd been drinking.",
-        "source": "Dennis Rodman"
+        "quote": "Wherever you go, there you are.",
+        "source": "Backaroo Banzai",
+				"size": 180
     },
     {
-        "quote": "I've made a huge mistake.",
-        "source": "G.O.B."
+        "quote": "I'm afraid I can't do that, Dave.",
+        "source": "HAL 9000",
+				"size": 180
     },
     {
-        "quote": "Yes, I have smoked crack cocaine",
-        "source": "Toronto Mayor Rob Ford",
-        "size": 65
+        "quote": "This planet ain't mine, monkey boy",
+        "source": "John Butte",
+        "size": 130
     },
     {
-        "quote": "Annyong.",
-        "source": "Annyong",
-        "size": 90
+        "quote": "If only you could see what i have seen with your eyes.",
+        "source": "Roy Batty",
+        "size": 180
     },
     {
-        "quote": "STEVE HOLT!",
-        "source": "Steve Holt",
-        "size": 65
+        "quote": "More human than human is our motto.",
+        "source": "Eldon Tyrell",
+        "size": 130
     },
     {
-        "quote": "Whoa, whoa, whoa. There's still plenty of meat on that bone. Now you take this home, throw it in a pot, add some broth, a potato. Baby, you've got a stew going.",
-        "source": "Carl Weathers",
-        "size": 40
+        "quote": "Fiery the angels fell. Deep thunder rolled round their shores. Burning with the fires of Orc.",
+        "source": "Roy Batty",
+        "size": 80
     }
 ];
 
@@ -94,12 +96,16 @@ function saveImage() {
         document.body.appendChild(canvas);
         window.oCanvas = document.getElementsByTagName("canvas");
         window.oCanvas = window.oCanvas[0];
-        var strDataURI = window.oCanvas.toDataURL();
+				window.oCanvas.imageSmoothingEnabled = true;
+				window.oCanvas.mozImageSmoothingEnabled = true;
+				window.oCanvas.webkitImageSmoothingEnabled = true;
+				window.oCanvas.msImageSmoothingEnabled = true;
+        var strDataURI = window.oCanvas.toDataURL('image/jpeg',1);
 
         var quote = $('blockquote').text().split(' ', 5);
         var filename = convertToSlug(quote.join(' '));
 
-        var a = $("<a>").attr("href", strDataURI).attr("download", "quote-" + filename + ".png").appendTo("body");
+        var a = $("<a>").attr("href", strDataURI).attr("download", "quote-" + filename + ".jpg").appendTo("body");
 
         a[0].click();
 
@@ -155,11 +161,11 @@ $(function() {
         $poster.removeClass('square sixteen-by-nine').addClass($(this).attr('id'));
 
         if ($poster.hasClass('sixteen-by-nine')) {
-            adjustFontSize(32);
-            $fontSize.val(32);
+            adjustFontSize(36);
+            $fontSize.val(36);
         } else {
-            adjustFontSize(90);
-            $fontSize.val(90);
+            adjustFontSize(48);
+            $fontSize.val(48);
         }
     });
 

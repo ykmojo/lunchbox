@@ -44,7 +44,7 @@ var onDocumentLoad = function() {
     updateTimestamp();
     timestampInterval = setInterval(updateTimestamp, 1000);
     setupMediumEditor();
-    
+
     $('[data-toggle="tooltip"]').tooltip();
 }
 
@@ -125,12 +125,16 @@ var saveImage = function() {
         document.body.appendChild(canvas);
         window.oCanvas = document.getElementsByTagName("canvas");
         window.oCanvas = window.oCanvas[0];
-        var strDataURI = window.oCanvas.toDataURL();
+				window.oCanvas.imageSmoothingEnabled = true;
+				window.oCanvas.mozImageSmoothingEnabled = true;
+				window.oCanvas.webkitImageSmoothingEnabled = true;
+				window.oCanvas.msImageSmoothingEnabled = true;
+        var strDataURI = window.oCanvas.toDataURL('image/jpeg',1);
 
         var headline = $kicker.text().split(' ', 9);
         var filename = convertToSlug(headline.join(' '));
 
-        var a = $("<a>").attr("href", strDataURI).attr("download", "factlist-" + filename + ".png").appendTo("body");
+        var a = $("<a>").attr("href", strDataURI).attr("download", "factlist-" + filename + ".jpg").appendTo("body");
 
         a[0].click();
 
