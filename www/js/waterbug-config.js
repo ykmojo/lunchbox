@@ -1,6 +1,6 @@
 // widths and padding
 var canvasWidth = 1280; // this will be the exported width of the image
-var elementPadding = 10; // padding around the logo and credit text
+var elementPadding = 40; // padding around the logo and credit text
 
 // logo configuration
 // the name of the logo object should match the value of the corresponding radio button in the HTML.
@@ -10,8 +10,8 @@ var logos = {
         blackPath: '../img/mojo-logo-black.svg', // path to black logo
 				//whitePath: '../img/mojo-logo-white.png', // path to white logo
         //blackPath: '../img/mojo-logo-black.png', // path to black logo
-        w: 200, // width of logo
-        h: 37, // height of logo
+        w: 150, // width of logo
+        h: 25, // height of logo
         display: 'Lunchbox'
     },
     'socializr': {
@@ -19,8 +19,8 @@ var logos = {
         blackPath: '../img/mojo-logo-black.svg',
 				//whitePath: '../img/mojo-logo-white.png',
         //blackPath: '../img/mojo-logo-black.png',
-        w: 200,
-        h: 37,
+        w: 150,
+        h: 25,
         display: 'Socializr'
     }
 };

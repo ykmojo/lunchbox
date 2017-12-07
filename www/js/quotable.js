@@ -14,32 +14,32 @@ var quotes = [
     {
         "quote": "Wherever you go, there you are.",
         "source": "Backaroo Banzai",
-				"size": 180
+				"size": 90
     },
     {
         "quote": "I'm afraid I can't do that, Dave.",
         "source": "HAL 9000",
-				"size": 180
+				"size": 90
     },
     {
         "quote": "This planet ain't mine, monkey boy",
         "source": "John Butte",
-        "size": 130
+        "size": 65
     },
     {
         "quote": "If only you could see what i have seen with your eyes.",
         "source": "Roy Batty",
-        "size": 180
+        "size": 90
     },
     {
         "quote": "More human than human is our motto.",
         "source": "Eldon Tyrell",
-        "size": 130
+        "size": 65
     },
     {
         "quote": "Fiery the angels fell. Deep thunder rolled round their shores. Burning with the fires of Orc.",
         "source": "Roy Batty",
-        "size": 80
+        "size": 40
     }
 ];
 
