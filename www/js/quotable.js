@@ -27,7 +27,7 @@ var quotes = [
         "size": 65
     },
     {
-        "quote": "If only you could see what i have seen with your eyes.",
+        "quote": "If only you could see what I have seen with your eyes.",
         "source": "Roy Batty",
         "size": 90
     },

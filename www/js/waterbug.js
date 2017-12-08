@@ -40,6 +40,9 @@ var logo = new Image();
 
 
 var onDocumentLoad = function(e) {
+	if(defaultImage !== '../img/test-kitten.jpg') {
+		credit = "Adam Vieyra/Mother Jones";
+	}
     $source = $('#source');
     $photographer = $('#photographer');
     $canvas = $('#imageCanvas');

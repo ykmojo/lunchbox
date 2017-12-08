@@ -1,15 +1,13 @@
 // widths and padding
 var canvasWidth = 1280; // this will be the exported width of the image
 var elementPadding = 40; // padding around the logo and credit text
-
+var rotating_images = ['test-kitten.jpg','color_breaking.png','color_exclusive.png','color_just_in.png','color_news_alert.png','color_scoop.png'];
 // logo configuration
 // the name of the logo object should match the value of the corresponding radio button in the HTML.
 var logos = {
     'lunchbox': {
         whitePath: '../img/mojo-logo-white.svg', // path to white logo
         blackPath: '../img/mojo-logo-black.svg', // path to black logo
-				//whitePath: '../img/mojo-logo-white.png', // path to white logo
-        //blackPath: '../img/mojo-logo-black.png', // path to black logo
         w: 150, // width of logo
         h: 25, // height of logo
         display: 'Lunchbox'
@@ -17,8 +15,6 @@ var logos = {
     'socializr': {
         whitePath: '../img/mojo-logo-white.svg',
         blackPath: '../img/mojo-logo-black.svg',
-				//whitePath: '../img/mojo-logo-white.png',
-        //blackPath: '../img/mojo-logo-black.png',
         w: 150,
         h: 25,
         display: 'Socializr'
@@ -85,10 +81,12 @@ var copyrightOptions = {
     }
 }
 
+var chosen_image = [Math.floor(Math.random()*rotating_images.length)];
+
 // app load defaults
 var currentCrop = 'twitter'; // default crop size
 var currentLogo = 'lunchbox'; // default logo slug
 var currentLogoColor = 'white'; // default logo color
 var currentTextColor = 'white'; // default text color
-var defaultImage = '../img/test-kitten.jpg'; // path to image to load as test image
+var defaultImage = '../img/' + rotating_images[chosen_image]; // path to image to load as test image
 var defaultLogo = logos[currentLogo]['whitePath'] // path to default logo
