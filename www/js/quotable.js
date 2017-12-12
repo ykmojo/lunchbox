@@ -43,6 +43,12 @@ var quotes = [
     }
 ];
 
+//Young's code to change aspect ratio on load
+	$(document).ready(function() {
+		$('.poster').addClass('sixteen-by-nine');
+		$('.btn-group button#sixteen-by-nine').addClass('active');
+	});
+//end Young's code
 
 // Change straight quotes to curly and double hyphens to em-dashes.
 function smarten(a) {
